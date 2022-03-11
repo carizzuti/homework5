@@ -15,14 +15,14 @@ export function Quiz() {
     correctAnswer: 0,
   };
 
-  const checkAnswer = (index) => {
-    console.log("I'm checking the answer", index);
-    if (index === mockData.correctAnswer) {
+  const checkAnswer = (selectedIndex) => {
+    console.log("I'm checking the answer", selectedIndex);
+    if (selectedIndex === mockData.correctAnswer) {
       alert("Correct");
     } else {
       alert("Incorrect");
     }
   };
 
-  return <QuizView data={mockData} press={checkAnswer} />;
+  return <QuizView data={mockData} press={checkAnswer}/>;
 }
